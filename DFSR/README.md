@@ -37,14 +37,39 @@ It is assumed that Zabbix server is already deployed and Zabbix Agent is already
    </code>
  </li>
  <li>Restart Zabbix Agent service</li>
+  <li><i>This point is for Zabbix 2.X only, because the template for Zabbix 3.X and above has these mappings included</i>
+  <br>
+  <a href="https://www.zabbix.com/documentation/2.2/manual/config/items/mapping">Add</a> value mappings listed below:<br>
+  <code><b>DFSR::ConnectionState</b></code><br>
+  <code>0 ⇒ Connecting</code><br>
+  <code>1 ⇒ Online</code><br>
+  <code>2 ⇒ Offline</code><br>
+  <code>3 ⇒ In Error</code><br>
+  <br>
+  <code><b>DFSR::RFState</b></code><br>
+  <code>0 ⇒ Uninitialized</code><br>
+  <code>1 ⇒ Initialized</code><br>
+  <code>2 ⇒ Initial Sync</code><br>
+  <code>3 ⇒ Auto Recovery</code><br>
+  <code>4 ⇒ Normal</code><br>
+  <code>5 ⇒ In Error</code><br>
+  <br>
+  <code><b>DFSR::ServiceState</b></code><br>
+  <code>0 ⇒ Starting</code><br>
+  <code>1 ⇒ Running</code><br>
+  <code>2 ⇒ Degraded</code><br>
+  <code>3 ⇒ Shutting Down</code><br>
+  <code>100 ⇒ Stopped</code><br>
+  <code>101 ⇒ Not Found</code><br>
+ </li>
  <li><a href="https://www.zabbix.com/documentation/current/manual/xml_export_import/templates#importing">Import</a> the template to Zabbix server:
  <ul>
-  <li><a href="https://github.com/perlestius/Zabbix_Templates/blob/master/DFSR/Template_App_DFSR_2.2-4.2.xml">Template_App_DFSR_2.2-4.2.xml</a> - for Zabbix version from 2.2 to 4.2</li>
-  <li><a href="https://github.com/perlestius/Zabbix_Templates/blob/master/DFSR/Template_App_DFSR_4.4-5.0.xml">Template_App_DFSR_4.4-5.0.xml</a> - for Zabbix version from 4.4 to 5.0</li>
+  <li><a href="https://github.com/perlestius/Zabbix_Templates/blob/master/DFSR/Template_App_DFSR_v1.0.1_ZBX_2.2-2.4.xml">Template_App_DFSR_v1.0.1_ZBX_2.2-2.4.xml</a> - for Zabbix version 2.2 to 2.4</li>
+  <li><a href="https://github.com/perlestius/Zabbix_Templates/blob/master/DFSR/Template_App_DFSR_v1.0.1_ZBX_3.0-5.0.xml">Template_App_DFSR_v1.0.1_ZBX_3.0-5.0.xml</a> - for Zabbix version from 3.0 to 5.0</li>
  </ul> 
  </li>
  <li><a href="https://www.zabbix.com/documentation/current/manual/config/hosts/host">Add</a> the template to DFSR hosts</li>
- <li>(Optional) Enable disabled items and item prototypes you need</li>
+ <li><i>(Optional).</i> Enable disabled items and item prototypes you need</li>
 </ol>
 
 <h2>FEEDBACK</h2>

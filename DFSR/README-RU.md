@@ -36,14 +36,40 @@
    </code>
  </li>
  <li>Перезапустите службу Zabbix Agent</li>
- <li><a href="https://www.zabbix.com/documentation/current/ru/manual/xml_export_import/templates#%D0%B8%D0%BC%D0%BF%D0%BE%D1%80%D1%82">Импортируйте</a> шаблон мониторинга на сервер Zabbix:
+ <li><i>Этот пункт только для Zabbix версий 2.X, т.к. шаблон для версий 3.X и выше уже содержит все необходимые наборы для преобразования значений</i>
+  <br>
+  <a href="https://www.zabbix.com/documentation/2.2/ru/manual/config/items/mapping">Создайте</a> следующие наборы преобразования значений:<br>
+  <code><b>DFSR::ConnectionState</b></code><br>
+  <code>0 ⇒ Connecting</code><br>
+  <code>1 ⇒ Online</code><br>
+  <code>2 ⇒ Offline</code><br>
+  <code>3 ⇒ In Error</code><br>
+  <br>
+  <code><b>DFSR::RFState</b></code><br>
+  <code>0 ⇒ Uninitialized</code><br>
+  <code>1 ⇒ Initialized</code><br>
+  <code>2 ⇒ Initial Sync</code><br>
+  <code>3 ⇒ Auto Recovery</code><br>
+  <code>4 ⇒ Normal</code><br>
+  <code>5 ⇒ In Error</code><br>
+  <br>
+  <code><b>DFSR::ServiceState</b></code><br>
+  <code>0 ⇒ Starting</code><br>
+  <code>1 ⇒ Running</code><br>
+  <code>2 ⇒ Degraded</code><br>
+  <code>3 ⇒ Shutting Down</code><br>
+  <code>100 ⇒ Stopped</code><br>
+  <code>101 ⇒ Not Found</code><br>
+ </li>
+
+<li><a href="https://www.zabbix.com/documentation/current/ru/manual/xml_export_import/templates#%D0%B8%D0%BC%D0%BF%D0%BE%D1%80%D1%82">Импортируйте</a> шаблон мониторинга на сервер Zabbix:
  <ul>
-  <li><a href="https://github.com/perlestius/Zabbix_Templates/blob/master/DFSR/Template_App_DFSR_2.2-4.2.xml">Template_App_DFSR_2.2-4.2.xml</a> - для Zabbix от версии 2.2 до 4.2</li>
-  <li><a href="https://github.com/perlestius/Zabbix_Templates/blob/master/DFSR/Template_App_DFSR_4.4-5.0.xml">Template_App_DFSR_4.4-5.0.xml</a> - для Zabbix от версии 4.4 до 5.0</li>
+  <li><a href="https://github.com/perlestius/Zabbix_Templates/blob/master/DFSR/Template_App_DFSR_v1.0.1_ZBX_2.2-2.4.xml">Template_App_DFSR_v1.0.1_ZBX_2.2-2.4.xml</a> - для Zabbix от версии 2.2 до 2.4</li>
+  <li><a href="https://github.com/perlestius/Zabbix_Templates/blob/master/DFSR/Template_App_DFSR_v1.0.1_ZBX_3.0-5.0.xml">Template_App_DFSR_v1.0.1_ZBX_3.0-5.0.xml</a> - для Zabbix от версии 3.0 до 5.0</li>
  </ul> 
  </li>
  <li><a href="https://www.zabbix.com/documentation/current/ru/manual/config/hosts/host">Добавьте</a> шаблон к хостам с ролью DFSR</li>
- <li>(Опционально). Включите отключенные по умолчанию метрики (правила обнаружения, элементы данных, прототипы элементов), которые вам необходимы</li>
+ <li><i>(Опционально).</i> Включите отключенные по умолчанию метрики (правила обнаружения, элементы данных, прототипы элементов), которые вам необходимы</li>
 </ol>
 
 <h2>ОБРАТНАЯ СВЯЗЬ</h2>
