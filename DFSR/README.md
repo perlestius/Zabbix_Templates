@@ -1,6 +1,6 @@
 <a href="README-RU.md">Русская версия</a>
 
-<h1>Template for monitoring Windows hosts with RDS Replication role installed</h1>
+<h1>Template for monitoring Windows hosts with DFS Replication role installed</h1>
 
 <h2>FEATURES</h2>
 <ul>
