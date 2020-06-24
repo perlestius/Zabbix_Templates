@@ -4327,7 +4327,7 @@ WARNING: When you make a replicated folder read-only, DFS Replication overwrites
                     <host_prototypes/>
                 </discovery_rule>
                 <discovery_rule>
-                    <name>DFS Replication Service Volumes</name>
+                    <name>DFS Replication Service Volumes LLD</name>
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
