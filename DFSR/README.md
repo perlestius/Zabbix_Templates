@@ -61,11 +61,17 @@ It is assumed that Zabbix server is already deployed and Zabbix Agent is already
   <code>3 ⇒ Shutting Down</code><br>
   <code>100 ⇒ Stopped</code><br>
   <code>101 ⇒ Not Found</code><br>
+  <br>
+  <code><b>DFSR::VolumeState</b></code><br>
+  <code>0 ⇒ Initialized</code><br>
+  <code>1 ⇒ Shutting Down</code><br>
+  <code>2 ⇒ In Error</code><br>
+  <code>3 ⇒ Auto Recovery</code><br>
  </li>
  <li><a href="https://www.zabbix.com/documentation/current/manual/xml_export_import/templates#importing">Import</a> the template to Zabbix server:
  <ul>
-  <li><a href="https://github.com/perlestius/Zabbix_Templates/blob/master/DFSR/Template_App_DFSR_v1.0.1_ZBX_2.2-2.4.xml">Template_App_DFSR_v1.0.1_ZBX_2.2-2.4.xml</a> - for Zabbix version 2.2 to 2.4</li>
-  <li><a href="https://github.com/perlestius/Zabbix_Templates/blob/master/DFSR/Template_App_DFSR_v1.0.1_ZBX_3.0-5.0.xml">Template_App_DFSR_v1.0.1_ZBX_3.0-5.0.xml</a> - for Zabbix version from 3.0 to 5.0</li>
+  <li><a href="https://github.com/perlestius/Zabbix_Templates/blob/master/DFSR/Template_App_DFSR_v1.0.2_ZBX_2.2-2.4.xml">Template_App_DFSR_v1.0.2_ZBX_2.2-2.4.xml</a> - for Zabbix version 2.2 to 2.4</li>
+  <li><a href="https://github.com/perlestius/Zabbix_Templates/blob/master/DFSR/Template_App_DFSR_v1.0.2_ZBX_3.0-5.0.xml">Template_App_DFSR_v1.0.2_ZBX_3.0-5.0.xml</a> - for Zabbix version from 3.0 to 5.0</li>
  </ul> 
  </li>
  <li><a href="https://www.zabbix.com/documentation/current/manual/config/hosts/host">Add</a> the template to DFSR hosts</li>
