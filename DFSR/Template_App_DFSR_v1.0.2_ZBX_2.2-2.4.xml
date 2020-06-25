@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>2.0</version>
-    <date>2020-06-24T22:48:52Z</date>
+    <date>2020-06-25T22:26:55Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -3796,7 +3796,9 @@ If all members are disabled for a replicated folder, then the first member that 
                                     <name>DFS Replication Groups</name>
                                 </application>
                             </applications>
-                            <valuemap/>
+                            <valuemap>
+                                <name>Service state</name>
+                            </valuemap>
                         </item_prototype>
                         <item_prototype>
                             <name>RG '{#RGNAME}: partner '{#PARTNERNAME}' WMI check</name>
@@ -3841,7 +3843,9 @@ If all members are disabled for a replicated folder, then the first member that 
                                     <name>DFS Replication Groups</name>
                                 </application>
                             </applications>
-                            <valuemap/>
+                            <valuemap>
+                                <name>Service state</name>
+                            </valuemap>
                         </item_prototype>
                     </item_prototypes>
                     <trigger_prototypes>

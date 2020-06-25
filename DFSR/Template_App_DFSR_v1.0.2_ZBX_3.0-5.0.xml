@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.0</version>
-    <date>2020-06-24T22:46:13Z</date>
+    <date>2020-06-24T23:23:48Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -1392,7 +1392,9 @@ If all members are disabled for a replicated folder, then the first member that 
                                     <name>DFS Replication Groups</name>
                                 </application>
                             </applications>
-                            <valuemap/>
+                            <valuemap>
+                                <name>Service state</name>
+                            </valuemap>
                             <logtimefmt/>
                             <application_prototypes/>
                         </item_prototype>
@@ -1439,7 +1441,9 @@ If all members are disabled for a replicated folder, then the first member that 
                                     <name>DFS Replication Groups</name>
                                 </application>
                             </applications>
-                            <valuemap/>
+                            <valuemap>
+                                <name>Service state</name>
+                            </valuemap>
                             <logtimefmt/>
                             <application_prototypes/>
                         </item_prototype>
@@ -4710,6 +4714,19 @@ Auto Recovery (3)</description>
                 <mapping>
                     <value>3</value>
                     <newvalue>Auto Recovery</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>Service state</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>Down</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>Up</newvalue>
                 </mapping>
             </mappings>
         </value_map>
