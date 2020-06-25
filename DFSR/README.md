@@ -16,7 +16,7 @@
 <ul>
  <li>OS Windows 2008 R2 SP1 or above</li>
  <li>Zabbix 2.2 or above</li>
- <li>Zabbix Super Admin permissions (to add value mappings)</li>
+ <li>Zabbix Super Admin permissions (to add value maps)</li>
  <li><a href="https://docs.microsoft.com/en-us/powershell/scripting/windows-powershell/install/installing-windows-powershell?view=powershell-5.1">PowerShell 3.0 or above</a></li>
  <li>Zabbix Agent service account should be a member of local 'Administrators' group on each partner server. It's necessary to get 'backlog size' and 'redundancy' metrics for replicated folders</li>
  <li>Since DFSR is a distributed service, all involved servers should be monitored via this template to get complete information</li>
