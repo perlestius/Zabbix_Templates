@@ -509,7 +509,7 @@ Not Found (101)</description>
                     <description/>
                     <item_prototypes>
                         <item_prototype>
-                            <name>RF '{#RGNAME}\{#RFNAME}': backlog size for '{#SSERVERNAME}&gt;{#RSERVERNAME}'</name>
+                            <name>RF '{#RGNAME}\{#RFNAME}': backlog ({#SSERVERNAME}&gt;{#RSERVERNAME})</name>
                             <type>0</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
@@ -557,7 +557,7 @@ Not Found (101)</description>
                     <trigger_prototypes>
                         <trigger_prototype>
                             <expression>{Template App DFS Replication:dfsr.params[RFBacklog,{#RFID},{#RSERVERID}].min({$BACKLOG_PERIOD})}&gt;{$BACKLOG_MAX_AVERAGE}</expression>
-                            <name>RF '{#RGNAME}\{#RFNAME}': backlog size for '{#SSERVERNAME}&gt;{#RSERVERNAME}' &gt; {$BACKLOG_MAX_AVERAGE} for {$BACKLOG_PERIOD} (files={ITEM.LASTVALUE})</name>
+                            <name>RF '{#RGNAME}\{#RFNAME}': backlog ({#SSERVERNAME}&gt;{#RSERVERNAME}) &gt; {$BACKLOG_MAX_AVERAGE} for {$BACKLOG_PERIOD} (files={ITEM.LASTVALUE})</name>
                             <url/>
                             <status>0</status>
                             <priority>3</priority>
@@ -566,7 +566,7 @@ Not Found (101)</description>
                         </trigger_prototype>
                         <trigger_prototype>
                             <expression>{Template App DFS Replication:dfsr.params[RFBacklog,{#RFID},{#RSERVERID}].min({$BACKLOG_PERIOD})}&gt;{$BACKLOG_MAX_WARNING}</expression>
-                            <name>RF '{#RGNAME}\{#RFNAME}': backlog size for '{#SSERVERNAME}&gt;{#RSERVERNAME}' &gt; {$BACKLOG_MAX_WARNING} for {$BACKLOG_PERIOD} (files={ITEM.LASTVALUE})</name>
+                            <name>RF '{#RGNAME}\{#RFNAME}': backlog ({#SSERVERNAME}&gt;{#RSERVERNAME}) &gt; {$BACKLOG_MAX_WARNING} for {$BACKLOG_PERIOD} (files={ITEM.LASTVALUE})</name>
                             <url/>
                             <status>0</status>
                             <priority>2</priority>
@@ -576,7 +576,7 @@ Not Found (101)</description>
                     </trigger_prototypes>
                     <graph_prototypes>
                         <graph_prototype>
-                            <name>RF '{#RGNAME}\{#RFNAME}': backlog size</name>
+                            <name>RF '{#RGNAME}\{#RFNAME}': backlog size backlog ({#SSERVERNAME}&gt;{#RSERVERNAME})</name>
                             <width>600</width>
                             <height>340</height>
                             <yaxismin>0.0000</yaxismin>
