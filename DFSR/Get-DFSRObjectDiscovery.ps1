@@ -3,6 +3,7 @@
     [parameter(Mandatory=$true, Position=0)][String]$ObjectType
 )
 
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 
 If ($PSVersionTable.PSVersion.Major -lt 3) {
     "The script requires PowerShell version 3.0 or above"
@@ -286,7 +287,6 @@ Switch($ObjectType) {
     }
 }
 
-@{
-    "data" = $Data
-} | ConvertTo-Json
+$JSONOutput = @{"data" = $Data} | ConvertTo-Json -Compress
+[Console]::WriteLine($JSONOutput)
 
