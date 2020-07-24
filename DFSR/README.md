@@ -79,6 +79,9 @@ It is assumed that Zabbix server is already deployed and Zabbix Agent is already
  <li><i>(Optional).</i> Enable disabled items and item prototypes you need</li>
 </ol>
 
+<h2>KNOWN ISSUES</h2>
+Zabbix agent stops collecting performance counters for replicated folders and generates "Cannot obtain performance information from collector" errors. It usually happens after restarting DFS Replication service or after starting host backup procedure. The reason is unknown. Workaround: restart Zabbix Agent service.
+
 <h2>FEEDBACK</h2>
 It's better to use <a href="https://github.com/perlestius/Zabbix_Templates/tree/master/DFSR">GitHub</a>. Also, you can communicate with me via email: nproskuryakov[@]gmail[.]com
 
